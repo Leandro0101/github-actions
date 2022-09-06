@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: fetch files to OS
-      uses: actions/checkout@2
+      uses: actions/checkout@v2
     - name: print date
       run: date
