@@ -23,4 +23,4 @@ jobs:
         uses: actions/checkout@v2
       
       - name: print date
-        uses: Get-Date
+        run: Get-Date
