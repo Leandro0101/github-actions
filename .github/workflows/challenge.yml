@@ -1,0 +1,15 @@
+name: challenge
+
+on:
+  push:
+    branches: dev
+
+jobs:
+  print-ubuntu:
+    name: print date on ubuntu
+    runs-on: ubuntu-latest
+    steps:
+    - name: fetch files to OS
+      uses: actions/checkout@2
+    - name: print date
+      run: date
