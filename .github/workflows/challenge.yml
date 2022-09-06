@@ -26,6 +26,7 @@ jobs:
         run: Get-Date
 
   calc-expression:
+    needs: print-windows
     name: calculate the expression
     runs-on: ubuntu-latest
     steps:
