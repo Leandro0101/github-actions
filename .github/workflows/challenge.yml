@@ -33,4 +33,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: calculate it
-        run: bc <<< 4*5+7
+        run: 'bc <<< 4*5+7'
