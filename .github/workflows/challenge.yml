@@ -24,3 +24,13 @@ jobs:
       
       - name: print date
         run: Get-Date
+
+  calc-expression:
+    name: calculate the expression
+    runs-on: ubuntu-latest
+    steps:
+      - name: fetch files to OS
+        uses: actions/checkout@v2
+
+      - name: calculate it
+        run: bc <<< 4*5+7
