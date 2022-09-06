@@ -11,5 +11,16 @@ jobs:
     steps:
     - name: fetch files to OS
       uses: actions/checkout@v2
+
     - name: print date
       run: date
+
+  print-windows:
+    name: print date on windows
+    runs-on: windows-latest
+    steps:
+      - name: fetch files to OS
+        uses: actions/checkout@v2
+      
+      - name: print date
+        uses: Get-Date
