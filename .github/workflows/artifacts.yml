@@ -40,7 +40,7 @@ jobs:
       with:
         name: application-bundle
     
-    - run: ls ./${{ env.ARTIFACT_NAME }}
+    - run: node ./${{ env.ARTIFACT_NAME }}/index
 
 
       
