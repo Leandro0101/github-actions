@@ -1,0 +1,41 @@
+name: artifact
+
+on: push
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Transpile typescript code
+      run: |
+        yarn
+        yarn tsc
+    - name: generate artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: application-bundle
+        path: ./dist/index
+  
+  test-application: 
+    name: running application
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Download artifact
+      uses: actions/download-artifact@v1.0.0
+      with:
+        name: application-bundle
+
+    - run: ls
+
+
+      
