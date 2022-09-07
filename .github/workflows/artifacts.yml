@@ -42,5 +42,7 @@ jobs:
     
     - run: node ./${{ env.ARTIFACT_NAME }}/index
 
+    - run: nove -v
+
 
       
