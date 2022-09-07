@@ -16,8 +16,8 @@ jobs:
         yarn
         yarn tsc
 
-    run: ls
-    
+    - run: ls
+
     - name: generate artifact
       uses: actions/upload-artifact@v1.0.0
       with:
