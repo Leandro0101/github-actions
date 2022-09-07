@@ -17,11 +17,10 @@ jobs:
         yarn tsc
 
     - name: generate artifact
-      run: ls
       uses: actions/upload-artifact@v1.0.0
       with:
         name: application-bundle
-        path: "./dist/index"
+        path: ./dist/index.js
   
   test-application: 
     name: running application
